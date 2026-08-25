@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Netflix | Capacitación Digital Profesional</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Outfit & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#0A0A0A',
+                        darkCard: '#161616',
+                        netflixRed: '#E50914',
+                        premiumGold: '#F5C542',
+                        softWhite: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A0A0A;
+            color: #F5F5F5;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #E50914 0%, #F5C542 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #E50914 0%, #b20710 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #ff0a16 0%, #d40813 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(229, 9, 20, 0.5);
+        }
+        .glass-card {
+            background: rgba(22, 22, 22, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 197, 66, 0.15);
+        }
+        .hero-glow {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(229, 9, 20, 0.25) 0%, rgba(10, 10, 10, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .gold-glow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(245, 197, 66, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-deepBlack text-softWhite antialiased selection:bg-netflixRed selection:text-white">
+
+    <!-- 🔥 BARRA SUPERIOR FIJA -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-950 via-netflixRed to-red-950 border-b border-premiumGold/30 text-white text-xs sm:text-sm py-2 px-4 text-center font-semibold shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-6">
+            <span>🚨 <strong>PROMOCIÓN ESPECIAL HOY</strong></span>
+            <span class="line-through opacity-75">Precio normal: S/120</span>
+            <span class="bg-premiumGold text-deepBlack px-2 py-0.5 rounded-full font-bold shadow">🔥 Hoy solo: S/40</span>
+            <span class="hidden md:inline">⏰ Oferta por tiempo limitado</span>
+        </div>
+    </div>
+
+    <!-- Espaciador para la barra fija -->
+    <div class="h-10 sm:h-11"></div>
+
+    <!-- 🚀 HERO PRINCIPAL -->
+    <section class="relative min-h-[90vh] flex items-center justify-center pt-10 pb-16 px-4 overflow-hidden">
+        <div class="hero-glow top-10 left-1/2 -translate-x-1/2 md:left-1/4"></div>
+        <div class="gold-glow bottom-5 right-10"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-darkCard border border-premiumGold/35 text-premiumGold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-bolt"></i> Capacitación 100% Práctica
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Aprende el <span class="gradient-text">Método Netflix</span> Paso a Paso
+                </h1>
+                
+                <p class="text-base sm:text-lg text-gray-300 font-normal max-w-xl mx-auto lg:mx-0">
+                    Aprende desde cero con una explicación detallada y acompañamiento durante todo el proceso. Domina el sistema completo de forma sencilla y directa.
+                </p>
+
+                <!-- Precios y Ahorro -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 p-4 rounded-2xl glass-card">
+                    <div>
+                        <span class="text-gray-400 text-sm block">Precio normal</span>
+                        <span class="text-xl font-bold text-gray-400 line-through">S/120</span>
+                    </div>
+                    <div class="hidden sm:block text-gray-600 text-2xl">|</div>
+                    <div>
+                        <span class="text-premiumGold text-xs font-bold uppercase tracking-wider block">Precio promoción</span>
+                        <span class="text-3xl sm:text-4xl font-extrabold text-white">S/40</span>
+                    </div>
+                    <div class="bg-netflixRed/20 border border-netflixRed/50 text-netflixRed px-3 py-1 rounded-xl text-xs font-bold animate-pulse">
+                        🔥 Ahorra S/80 hoy
+                    </div>
+                </div>
+
+                <!-- Contador Regresivo -->
+                <div class="p-3 bg-darkCard/90 rounded-xl border border-premiumGold/20 max-w-md mx-auto lg:mx-0">
+                    <p class="text-xs text-gray-400 mb-1 font-medium text-center">⏰ Esta oferta finaliza en:</p>
+                    <div id="countdown" class="flex justify-center gap-4 text-center">
+                        <div>
+                            <span id="hours" class="text-xl font-extrabold text-premiumGold">05</span>
+                            <span class="text-[10px] text-gray-400 block uppercase">Horas</span>
+                        </div>
+                        <span class="text-xl font-bold text-gray-500">:</span>
+                        <div>
+                            <span id="minutes" class="text-xl font-extrabold text-premiumGold">42</span>
+                            <span class="text-[10px] text-gray-400 block uppercase">Min</span>
+                        </div>
+                        <span class="text-xl font-bold text-gray-500">:</span>
+                        <div>
+                            <span id="seconds" class="text-xl font-extrabold text-premiumGold">19</span>
+                            <span class="text-[10px] text-gray-400 block uppercase">Seg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                    <a href="https://wa.me/51927501546?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20M%C3%A9todo%20Netflix%20a%20S/40." target="_blank" class="btn-gradient text-white font-bold text-base sm:text-lg px-8 py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 text-center">
+                        <i class="fa-solid fa-rocket"></i> 🚀 QUIERO ACCEDER AHORA
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Imagen Hero (hero.png) -->
+            <div class="lg:col-span-6 relative flex justify-center">
+                <div class="relative w-full max-w-lg">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-netflixRed to-premiumGold rounded-3xl blur-lg opacity-40 animate-pulse"></div>
+                    
+                    <div class="relative glass-card rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden border border-premiumGold/30 text-center">
+                        <img src="hero.png" alt="Método Netflix Capacitación Digital" class="w-full h-auto rounded-2xl object-cover shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/600x400/161616/F5C542?text=Metodo+Netflix+Hero';">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="border-white/10 max-w-7xl mx-auto">
+
+    <!-- 📚 SECCIÓN: ¿QUÉ INCLUYE? -->
+    <section class="py-20 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-premiumGold text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-darkCard border border-premiumGold/3">Módulos Detallados</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">¿Qué <span class="gradient-text">Incluye</span> la Capacitación?</h2>
+                <p class="text-gray-400 text-sm sm:text-base">Todo lo que necesitas dominar explicado paso a paso, sin rodeos y directo al grano.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl hover:border-premiumGold/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-netflixRed/20 text-netflixRed flex items-center justify-center text-xl mb-4 border border-netflixRed/30">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Video detallado paso a paso</h3>
+                    <p class="text-sm text-gray-400">Instrucciones visuales claras para que no te pierdas ningún detalle del proceso.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl hover:border-premiumGold/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-premiumGold/20 text-premiumGold flex items-center justify-center text-xl mb-4 border border-premiumGold/30">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Explicación completa desde cero</h3>
+                    <p class="text-sm text-gray-400">Diseñado para cualquier nivel, sin importar si estás empezando por primera vez.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl hover:border-premiumGold/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-netflixRed/20 text-netflixRed flex items-center justify-center text-xl mb-4 border border-netflixRed/30">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Guía de inicio a fin</h3>
+                    <p class="text-sm text-gray-400">Una hoja de ruta exacta para aplicar el conocimiento de manera estructurada.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl hover:border-premiumGold/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-premiumGold/20 text-premiumGold flex items-center justify-center text-xl mb-4 border border-premiumGold/30">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Resolución de dudas y soporte</h3>
+                    <p class="text-sm text-gray-400">Acompañamiento personalizado durante el proceso para ayudarte cuando lo necesites.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl hover:border-premiumGold/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-netflixRed/20 text-netflixRed flex items-center justify-center text-xl mb-4 border border-netflixRed/30">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Explicación para obtener cuentas</h3>
+                    <p class="text-sm text-gray-400">Metodología precisa explicada de forma sencilla y práctica.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl hover:border-premiumGold/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-premiumGold/20 text-premiumGold flex items-center justify-center text-xl mb-4 border border-premiumGold/30">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Cuentas autopagables</h3>
+                    <p class="text-sm text-gray-400">Aprende a identificar y gestionar cuentas de manera óptima y segura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎯 SECCIÓN ¿QUÉ APRENDERÁS? -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto glass-card rounded-3xl p-8 sm:p-12 border border-premiumGold/20">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <h2 class="text-2xl sm:text-3xl font-extrabold">Lo que <span class="gradient-text">Aprenderás</span> en Detalle</h2>
+                <p class="text-gray-400 text-sm">Metodología limpia, ordenada y diseñada para generar resultados prácticos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-darkCard/60 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-premiumGold text-lg mt-0.5"></i>
+                    <span class="text-sm font-medium">Cómo iniciar correctamente desde el primer minuto.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-darkCard/60 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-premiumGold text-lg mt-0.5"></i>
+                    <span class="text-sm font-medium">Cómo aplicar el método paso a paso sin confusiones.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-darkCard/60 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-premiumGold text-lg mt-0.5"></i>
+                    <span class="text-sm font-medium">Cómo obtener cuentas de forma estructurada.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-darkCard/60 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-premiumGold text-lg mt-0.5"></i>
+                    <span class="text-sm font-medium">Cómo identificar cuentas autopagables con éxito.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-darkCard/60 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-premiumGold text-lg mt-0.5"></i>
+                    <span class="text-sm font-medium">Cómo aprovechar todo el potencial del método correctamente.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-darkCard/60 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-premiumGold text-lg mt-0.5"></i>
+                    <span class="text-sm font-medium">Cómo resolver problemas comunes rápidamente.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔥 SECCIÓN OFERTA Y CAJA DE VALOR -->
+    <section class="py-20 px-4 bg-darkCard/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative glass-card rounded-3xl p-8 sm:p-12 border-2 border-premiumGold/40 shadow-2xl overflow-hidden text-center space-y-6">
+                <div class="absolute -top-12 -right-12 w-32 h-32 bg-premiumGold/10 rounded-full blur-xl pointer-events-none"></div>
+
+                <span class="bg-netflixRed text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block">
+                    🔥 Oferta Especial por Tiempo Limitado
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold">
+                    🎁 Todo lo que <span class="gradient-text">Recibirás Hoy</span>
+                </h2>
+
+                <!-- Lista de Valor -->
+                <div class="max-w-md mx-auto text-left bg-darkCard/80 p-6 rounded-2xl border border-white/10 space-y-3 text-sm">
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Método Netflix completo</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Video detallado paso a paso</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Guía desde cero</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Soporte para resolver dudas</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Bono: Método Max</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Bono: Método Disney+</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Bono: Método Spotify</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-premiumGold"></i> Bono: Método Crunchyroll</div>
+                </div>
+
+                <!-- Precios -->
+                <div class="py-2">
+                    <span class="text-gray-400 text-sm block">Valor normal: <span class="line-through text-gray-400">S/120</span></span>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-white mt-1">
+                        S/40 <span class="text-xs text-premiumGold font-bold uppercase tracking-wider block mt-1">Pago Único</span>
+                    </div>
+                </div>
+
+                <!-- Botón de Acción Principal -->
+                <div class="pt-4">
+                    <a href="https://wa.me/51927501546?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20M%C3%A9todo%20Netflix%20a%20S/40." target="_blank" class="btn-gradient text-white font-bold text-lg px-10 py-5 rounded-2xl shadow-xl inline-flex items-center justify-center gap-3 w-full sm:w-auto">
+                        <i class="fa-solid fa-rocket"></i> 🚀 QUIERO ACCEDER AHORA
+                    </a>
+                    <div class="mt-3 flex items-center justify-center gap-2 text-xs text-gray-400">
+                        <i class="fa-solid fa-shield-cat text-premiumGold"></i> Acceso inmediato garantizado
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎁 SECCIÓN: BONOS EXCLUSIVOS INCLUIDOS (Tarjetas con Logos Asignados) -->
+    <section class="py-20 px-4 bg-deepBlack relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-darkCard/20 via-transparent to-deepBlack pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto relative z-10 space-y-12">
+            
+            <div class="text-center space-y-3">
+                <span class="text-premiumGold text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-darkCard border border-premiumGold/30">
+                    Regalos de Hoy
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">
+                    🎁 Bonos Exclusivos <span class="gradient-text">Incluidos</span>
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Accede hoy y recibe completamente gratis los siguientes métodos adicionales especializados.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Tarjeta 1: Método Max -->
+                <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-netflixRed/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col items-center text-center group bg-[#121212]">
+                    <div class="w-20 h-20 mb-4 rounded-xl bg-darkCard border border-white/10 flex items-center justify-center group-hover:border-netflixRed transition-colors p-3 overflow-hidden">
+                        <img src="images/max.png" alt="Método Max" class="max-h-full max-w-full object-contain mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/100x100/161616/FFFFFF?text=Max';">
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-netflixRed mb-1">Bono #1</span>
+                    <h3 class="text-lg font-bold text-white group-hover:text-premiumGold transition-colors">✓ Método Max</h3>
+                </div>
+
+                <!-- Tarjeta 2: Método Disney+ -->
+                <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-netflixRed/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col items-center text-center group bg-[#121212]">
+                    <div class="w-20 h-20 mb-4 rounded-xl bg-darkCard border border-white/10 flex items-center justify-center group-hover:border-netflixRed transition-colors p-3 overflow-hidden">
+                        <img src="images/disney.png" alt="Método Disney+" class="max-h-full max-w-full object-contain mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/100x100/161616/FFFFFF?text=Disney+';">
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-netflixRed mb-1">Bono #2</span>
+                    <h3 class="text-lg font-bold text-white group-hover:text-premiumGold transition-colors">✓ Método Disney+</h3>
+                </div>
+
+                <!-- Tarjeta 3: Método Spotify -->
+                <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-netflixRed/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col items-center text-center group bg-[#121212]">
+                    <div class="w-20 h-20 mb-4 rounded-xl bg-darkCard border border-white/10 flex items-center justify-center group-hover:border-netflixRed transition-colors p-3 overflow-hidden">
+                        <img src="images/spotify.png" alt="Método Spotify" class="max-h-full max-w-full object-contain mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/100x100/161616/FFFFFF?text=Spotify';">
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-netflixRed mb-1">Bono #3</span>
+                    <h3 class="text-lg font-bold text-white group-hover:text-premiumGold transition-colors">✓ Método Spotify</h3>
+                </div>
+
+                <!-- Tarjeta 4: Método Crunchyroll -->
+                <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-netflixRed/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col items-center text-center group bg-[#121212]">
+                    <div class="w-20 h-20 mb-4 rounded-xl bg-darkCard border border-white/10 flex items-center justify-center group-hover:border-netflixRed transition-colors p-3 overflow-hidden">
+                        <img src="images/crunchyroll.png" alt="Método Crunchyroll" class="max-h-full max-w-full object-contain mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/100x100/161616/FFFFFF?text=Crunchyroll';">
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-netflixRed mb-1">Bono #4</span>
+                    <h3 class="text-lg font-bold text-white group-hover:text-premiumGold transition-colors">✓ Método Crunchyroll</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ❓ PREGUNTAS FRECUENTES -->
+    <section class="py-20 px-4">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <div class="text-center space-y-3">
+                <span class="text-premiumGold text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-darkCard border border-premiumGold/3">Dudas Comunes</span>
+                <h2 class="text-3xl font-extrabold">Preguntas <span class="gradient-text">Frecuentes</span></h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-semibold flex justify-between items-center text-sm sm:text-base focus:outline-none">
+                        <span>¿Cuándo recibo el acceso?</span>
+                        <i class="fa-solid fa-chevron-down text-premiumGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400">
+                        El acceso al contenido y a todos los bonos es inmediato una vez confirmado tu pago. Te entregaremos todo directamente para que empieces hoy mismo.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-semibold flex justify-between items-center text-sm sm:text-base focus:outline-none">
+                        <span>¿Necesito experiencia previa?</span>
+                        <i class="fa-solid fa-chevron-down text-premiumGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400">
+                        No necesitas experiencia previa. La capacitación está diseñada paso a paso desde cero, con explicaciones sencillas y prácticas aptas para cualquier persona.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-semibold flex justify-between items-center text-sm sm:text-base focus:outline-none">
+                        <span>¿Tendré soporte si tengo dudas?</span>
+                        <i class="fa-solid fa-chevron-down text-premiumGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400">
+                        Sí. Cuentas con acompañamiento y soporte dedicado para ayudarte a resolver cualquier duda que tengas durante el proceso.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-semibold flex justify-between items-center text-sm sm:text-base focus:outline-none">
+                        <span>¿Los bonos están incluidos?</span>
+                        <i class="fa-solid fa-chevron-down text-premiumGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400">
+                        Sí, todos los bonos mencionados (Método Max, Disney+, Spotify y Crunchyroll) vienen incluidos sin ningún costo adicional con tu acceso de hoy.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-semibold flex justify-between items-center text-sm sm:text-base focus:outline-none">
+                        <span>¿Cómo accedo al contenido?</span>
+                        <i class="fa-solid fa-chevron-down text-premiumGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400">
+                        Tras realizar tu inscripción, recibirás las indicaciones y los accesos de forma rápida y segura a través de nuestro canal oficial de atención.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏆 SECCIÓN FINAL -->
+    <section class="py-24 px-4 relative overflow-hidden bg-gradient-to-t from-darkCard to-deepBlack text-center">
+        <div class="hero-glow top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="max-w-4xl mx-auto relative z-10 space-y-6">
+            <span class="text-premiumGold text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-darkCard border border-premiumGold/3">Cupos Disponibles</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+                🚀 Empieza <span class="gradient-text">hoy mismo</span>
+            </h2>
+            <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto">
+                Accede al Método Netflix y recibe todos los bonos incluidos.
+            </p>
+            <div class="py-2">
+                <span class="text-xs uppercase tracking-widest text-premiumGold font-semibold block mb-1">🔥 Oferta especial</span>
+                <span class="text-4xl font-extrabold text-white">S/40</span>
+            </div>
+            <div class="pt-2">
+                <a href="https://wa.me/51927501546?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20M%C3%A9todo%20Netflix%20a%20S/40." target="_blank" class="btn-gradient text-white font-extrabold text-lg sm:text-xl px-12 py-5 rounded-2xl shadow-2xl inline-flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-rocket"></i> 📲 QUIERO MI ACCESO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📲 BOTÓN FLOTANTE DE WHATSAPP -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/51927501546?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20M%C3%A9todo%20Netflix%20a%20S/40." target="_blank" class="bg-green-600 hover:bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300 hover:scale-105 border border-white/20">
+            <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
+            <span class="hidden sm:inline font-semibold text-sm pr-2">📲 ESCRIBIR POR WHATSAPP</span>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-4 text-center text-xs text-gray-500 border-t border-white/5">
+        <p>© 2026 Método Netflix. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts Interactivos -->
+    <script>
+        // Acordeón para Preguntas Frecuentes
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Contador Regresivo en tiempo real (5 horas simuladas)
+        function startCountdown() {
+            let totalSeconds = 5 * 3600 + 42 * 60 + 19;
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            setInterval(() => {
+                if (totalSeconds > 0) {
+                    totalSeconds--;
+                    const h = Math.floor(totalSeconds / 3600);
+                    const m = Math.floor((totalSeconds % 3600) / 60);
+                    const s = totalSeconds % 60;
+
+                    if(hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+                    if(minutesEl) minutesEl.textContent = String(m).padStart(2, '0');
+                    if(secondsEl) secondsEl.textContent = String(s).padStart(2, '0');
+                }
+            }, 1000);
+        }
+        startCountdown();
+    </script>
+</body>
+</html>
